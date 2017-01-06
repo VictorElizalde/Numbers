@@ -20,12 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        var i = 1
-        while i <= 50 {
-            cell.textLabel?.text = "\(i)"
-            i += 1
-            return cell
-        }
+        cell.textLabel?.text = String(indexPath.row + 1)
+        
+        return cell
     }
 
     override func viewDidLoad() {
